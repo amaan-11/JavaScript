@@ -1,19 +1,11 @@
-function diceroll()
+'use strict';
+let decish=confirm("Should i calculate the square root?");
+if (decish == true)
 {
-  return Math.floor(Math.random()*7)
+  let number = parseInt(prompt("What do you want the square root of?"));
+  let squareroot = Math.sqrt(number);
+  document.querySelector('#sqrt').innerHTML='The square root of ' + number + ' is ' + squareroot;
 }
-let mission = 'not accomplished'
-while (mission == 'not accomplished')
-{
-  let roll=diceroll()
-  if (roll==6)
-  {
-    mission='accomplished'
-    document.getElementById("rolls").innerHTML += `<li>Rolled a 6</li>`
-    break;
-  }
-  else
-  {
-    document.getElementById("rolls").innerHTML += `<li>Rolled a ${roll}</li>`
-  }
+else{
+  document.querySelector('#sqrt').innerHTML='Alrighty';
 }
