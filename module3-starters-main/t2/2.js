@@ -1,0 +1,10 @@
+const list=document.getElementById('target');
+const elem1 = document.createElement('li');
+const elem2 = document.createElement('li');
+const elem3 = document.createElement('li');
+elem1.innerText = 'First Item';
+elem2.innerText = 'Second Item';
+elem3.innerText = 'Third Item';
+list.appendChild(elem1);
+list.appendChild(elem2);
+list.appendChild(elem3);
