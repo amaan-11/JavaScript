@@ -92,15 +92,30 @@ const picArray = [
   },
 ];
 
-let placement= document.getElementById('pictures');
-for (let i= 0; i<picArray.length; i++)
-{
-  let article = document.createElement("article");
-  article.className="card";
-  let h2=document.createElement('h2')
-  h2.innerText=`${picArray[i].title}`
-  let img=document.createElement('img')
-  img.src=`${picArray[i].image.medium}`
-  img.alt=`${}`
-}
+const section = document.getElementById('pictures');
 
+for (let i = 0; i < 9; i++)
+{
+  let article = document.createElement('article');
+  article.className='card';
+  let title = picArray[i].title;
+  let caption = picArray[i].caption;
+  let description = picArray[i].description;
+  let image = picArray[i].image.medium;
+  let h2 = document.createElement('h2');
+  h2.innerText=`${title}`;
+  let figure = document.createElement('figure');
+  let img = document.createElement('img');
+  img.src=`${image}`;
+  img.alt=`${title}`;
+  let figcap = document.createElement('figcaption');
+  figcap.innerText=`${caption}`;
+  figure.appendChild(img);
+  figure.appendChild(figcap);
+  let p = document.createElement('p');
+  p.innerText=`${description}`;
+  article.appendChild(h2);
+  article.appendChild(figure);
+  article.appendChild(p);
+  section.appendChild(article);
+}
