@@ -11,7 +11,7 @@ while (guess!=0)
   wrongattempts.push(guess);
 }
 
-wrongattempts.sort((a,b) => a-b);
+wrongattempts.sort((a,b) => b-a);
 for (let i of wrongattempts) {
     console.log(i)
 }
